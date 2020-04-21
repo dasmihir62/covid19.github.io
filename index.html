@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+<link rel="stylesheet" href="css/style1.css">
+<title>covid-19 by SILVERTEX</title>
+<link rel="icon" href="log1.png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha256-JtQPj/3xub8oapVMaIijPNoM0DHoAtgh/gwFYuN5rik=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    
+    <!---
+	<?php  include 'link/links.php'; ?>
+    <!<?php  include 'css/style.php'; ?>-
+    <link rel="stylesheet" href="link.html">>-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg nav_style p-3">
+  <a class="navbar-brand pl-5" href="#">COVID-19</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto pr-5 text-capitalize">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#aboutid">about</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#sympid">symptoms</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#preventid">prevention</a>
+      </li>
+
+       <li class="nav-item">
+        <a class="nav-link" href="#contactid">contact</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+
+<div class="main_header">
+	<div class="row w-100 h-100" >
+		 <div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
+		 	<div class="leftside w-100 h-100 d-flex justify-content-center align-items-center">
+		 		<img src="images/logo.png" width="300" height="300">
+		 	</div>
+		 </div>
+
+		 <div class="col-lg-7 col-md-7 col-12 order-lg-2 order-1">
+		 	<div class="rightside w-100 h-100 d-flex justify-content-center align-items-center">
+		 		<h1>Let's<Stay style="color:red">Stay HOME</Stay>& Fight Together Against Cor<span class="corona_rot"> <img src="images/corona.png"> 
+		 		</span>na Virus</h1>
+		 	</div>
+		 </div>
+	</div>
+</div>
+
+
+<!-- **************** corona latest updates ************** -->
+<!---
+<section class="corona_update">
+	<div class="mb-3">
+		<h3 class="text-uppercase text-center">covid-19 updates</h3>
+	</div>
+
+	<div class="d-flex justify-content-around align-items-center count_style">
+		<div>
+			<h1 class="count">1,524,266</h1>
+			<p>Passengers screened at airport</p>
+		</div>
+
+		<div>
+			<h1 class="count">512</h1>
+			<p>Active COVID-19 cases*</p>
+		</div>
+
+
+		<div>
+			<h1 class="count">40</h1>
+			<p>Cured/discharged cases</p>
+		</div>
+
+		<div>
+			<h1 class="count">9</h1>
+			<p>Death cases</p>
+		</div>
+	</div>
+
+</section> -->
+<!---covid19 traking map-->
+<h2><span style="color:red " >COVID-18 WORLD MAP</span></h2>
+<div id="map">
+	
+</div>
+
+<!-- ****************** about section ********** -->
+
+<div class="container-fluid sub_section pt-5 pb-5 " id="sympid">
+	<div class="section_header text-center mb-5 mt-4">
+		<h1> About COVID-19</h1>
+	</div>
+
+	<div class="row pt-5">
+		<div class="col-lg-5 col-md-6 col-12 ml-5 about_res">
+			<div class="pic1">
+				<img src="images/aboutcorona.jpg" class="img-fluid"  width="500" height="300"><br>
+			</div>
+			<div class="pic2">
+			
+				<img src="images/genome.png" class="img-fluid 1" style="display:block"   width="500" height="300" margin-top="15px" >
+			</div>
+			<div class="pic3">
+				<img src="images/lifecyle.png" class="img-fluid2" width="500" height="300" margon-top="15px"  >
+			</div>
+		</div>
+
+		<div class="col-lg-6 col-md-6 col-12">
+			<h2><span style="color:green">What is COVID-19 (Corona-Virus)</span> </h2>
+			<p>COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019.</p>
+			<p>Coronaviruses are a <span style ="color:red">  large family of RNA viruses</span> which may cause illness in<strong><span style ="color:blue"> MAMMAL and BIRDS</span></strong>. In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19. </p><br>
+
+			<h2>Genome</h2>
+			<p>Coronaviruses contain a positive-sense, single-stranded RNA genome. The genome size for coronaviruses ranges from <span style="color:red">26.4 to 31.7 kilobases. The genome size is one of the largest among RNA viruses.</span> The genome has a 5′ methylated cap and a 3′ polyadenylated tail.</p>
+			<p>The genome organization for a coronavirus is 5′-leader-UTR-replicase/transcriptase-spike (S)-envelope (E)-membrane (M)-nucleocapsid (N)-3′UTR-poly (A) tail. The open reading frames 1a and 1b, which occupy the first two-thirds of the genome, encode the replicase/transcriptase polyprotein. The replicase/transcriptase polyprotein self cleaves to form nonstructural proteins</p>
+			<p>The later reading frames encode the four major structural proteins: spike, envelope, membrane, and nucleocapsid.[28] Interspersed between these reading frames are the reading frames for the accessory proteins. The number of accessory proteins and their function is unique depending on the specific coronavirus.[</p>
+			<h2>Life cycle</h2>
+			<p>Infection begins when the viral spike (S) glycoprotein attaches to its complementary host cell receptor. After attachment, a protease of the host cell cleaves and activates the receptor-attached spike protein. Depending on the host cell protease available, cleavage and activation allows the virus to enter the host cell by endocytosis or direct fusion of the viral envelop with the host membrane.</p>
+			<p>On entry into the host cell, the virus particle is uncoated, and its genome enters the cell cytoplasm. <span style="color:#FFC300;" >   The coronavirus RNA genome has a 5′ methylated cap and a 3′ polyadenylated tail, which allows the RNA to attach to the host cell's ribosome for translation.</span> The host ribosome translates the initial overlapping open reading frame of the virus genome and forms a long polyprotein. The polyprotein has its own proteases which cleave the polyprotein into multiple nonstructural proteins.</p>
+
+
+		</div>
+	</div>
+</div>
+
+
+<!-- /////////////// Coronavirus symptoms ////////////// -->
+
+<div class="container-fluid  pt-5 pb-5 " id="aboutid">
+	<div class="section_header text-center mb-5 mt-4">
+		<h1> Coronavirus symptoms</h1>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-12 mt-5">
+				<figure class="text-center">
+				<img src="images/cough.png" class="img-fluid " width="120" height="120" >
+				<figcaption> cough</figcaption>
+				</figure>
+			</div>
+
+			<div class= "col-lg-4 col-md-4 col-12 mt-5 " > 
+				<figure  class="text-center">
+					<img src="images/runnynose.png" class="img-fluid" width="120" height="120">
+					<figcaption > runny nose </figcaption>
+				</figure>
+			</div>
+
+			<div class= "col-lg-4 col-md-4 col-12 mt-5 " > 
+				<figure  class="text-center">
+					<img src="images/fever.png" class="img-fluid" width="120" height="120">
+					<figcaption > fever </figcaption>
+				</figure>
+			</div>
+
+			<div class= "col-lg-4 col-md-4 col-12 mt-5 " > 
+				<figure  class="text-center">
+					<img src="images/sick.png" class="img-fluid" width="120" height="120">
+					<figcaption > cold </figcaption>
+				</figure>
+			</div>
+
+			<div class= "col-lg-4 col-md-4 col-12 mt-5 " > 
+				<figure  class="text-center" >
+					<img src="images/week.png" class="img-fluid" width="120" height="120">
+					<figcaption > tiredness </figcaption>
+				</figure>
+			</div>
+
+			<div class= "col-lg-4 col-md-4 col-12 mt-5 " > 
+				<figure  class="text-center">
+					<img src="images/breath.png" class="img-fluid" width="120" height="120">
+					<figcaption > difficulty breathing (severe cases) </figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<!-- /////////////// Prevention Against Coronavirus ////////////// -->
+
+<div class="container-fluid sub_section  pt-5 pb-5 " id="preventid">
+	<div class="section_header text-center mb-5 mt-4">
+		<h1> 6 Steps Prevention Against Coronavirus </h1>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-12 mt-5">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-12">
+					<figure>
+					<img src="images/handwash.png" class="img-fluid" width="90" height="90">
+					</figure>
+					</div>
+
+					<div class="col-lg8 col-md-8 col-12">
+						<p>Wash your hands regularly for 20 seconds, with soap and water or alcohol-based hand rub</p>
+					</div>
+				</div>
+			</div>
+
+				<div class="col-lg-4  col-md-4  col-12 mt-5">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-12 ">
+						<figure>
+							<img src="images/mask.png" class="img-fluid" width="90" height="90">
+						</figure>
+					</div>
+					<div class="col-lg-8 col-md-8 col-12">
+						<p>Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze</p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-lg-4  col-md-4  col-12 mt-5">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-12 ">
+						<figure>
+							<img src="images/quarantine.png" class="img-fluid" width="90" height="90">
+						</figure>
+					</div>
+					<div class="col-lg-8 col-md-8 col-12">
+						<p>Avoid close contact (1 meter or 3 feet) with people who are unwell</p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-lg-4  col-md-4  col-12 mt-5">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-12 ">
+						<figure>
+							<img src="images/home.png" class="img-fluid" width="90" height="90">
+						</figure>
+					</div>
+					<div class="col-lg-8 col-md-8 col-12">
+						<p>Stay home and self-isolate from others in the household if you feel unwell</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4  col-md-4  col-12 mt-5">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-12 ">
+						<figure>
+							<img src="images/news.png" class="img-fluid" width="90" height="90">
+						</figure>
+					</div>
+					<div class="col-lg-8 col-md-8 col-12">
+						<p>Stay informed by watching news & follow the recommended practices</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4  col-md-4  col-12 mt-5">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-12 ">
+						<figure>
+							<img src="images/medical.png" class="img-fluid" width="90" height="90">
+						</figure>
+					</div>
+					<div class="col-lg-8 col-md-8 col-12">
+						<p>If you have fever, cough and difficulty breathing, seek medical care early</p>
+					</div>
+				</div>
+			</div>
+
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+
+<!-- /////////////// Contact Us ASAP ////////////// -->
+
+<div class="container-fluid   pt-5 pb-5 " id="contactid">
+	<div class="section_header text-center mb-5 mt-4">
+		<h1> 6 Steps Prevention Against Coronavirus </h1>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 col-12">
+
+				<form action="" method="POST">
+
+					<div class="form-group">
+						<label >username </label>
+						<input type="text" class="form-control" name="username" placeholder="name" autocomplete="off" required>
+					</div>
+
+					<div class="form-group">
+						<label >Email </label>
+						<input type="email" class="form-control" name="email" placeholder="name@example.com" required autocomplete="off">
+					</div>
+
+					<div class="form-group">
+						<label >mobile </label>
+						<input type="number" class="form-control" name="mobile" placeholder="mobile" autocomplete="off" required>
+					</div>
+
+					<div class="form-group">
+								<label >Select Symptoms</label> <br>
+
+								<div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+									<input type="checkbox" class="custom-control-input " id="customcheckbox1"    name="coronasym[]" value="cold">
+									<label class="custom-control-label" for="customcheckbox1">Cold</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline text-capitalize ">
+									<input type="checkbox" class="custom-control-input  "  id="customcheckbox2" name="coronasym[]" value="fever">
+									<label class="custom-control-label" for="customcheckbox2">fever</label>
+								</div>
+
+								<div class="custom-control custom-checkbox custom-control-inline text-capitalize ">
+									<input type="checkbox" class="custom-control-input  " id="customcheckbox3" name="coronasym[]" value="breath">
+									<label class="custom-control-label" for="customcheckbox3">difficulty in breath</label>
+								</div>
+
+								<div class="custom-control custom-checkbox custom-control-inline text-capitalize ">
+									<input type="checkbox" class="custom-control-input  " id="customcheckbox4" name="coronasym[]" value="tired">
+									<label class="custom-control-label" for="customcheckbox4">feeling weak</label>
+								</div>
+								</div>
+
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">Example textarea</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="msg"></textarea>
+						</div>
+
+						<a href=" https://mailchi.mp/5301bcf08575/silvertex-covid-19">	<button type="submit" class="btn btn-primary" name="submit">Submit</button></a>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- ///////////// top cursor /////////// -->
+
+<div class="container scrolltop float-right pr-5">
+	<i class="fa fa-arrow-up" onclick="topFunction()" id="myBtn"> </i>
+</div>
+
+
+<!-- /////////////////// fotter ////////////// -->
+
+<footer class="mt-5">
+	<div class="footer_style text-dark text-center container-fluid">
+		<p><i style='font-size:15px' class='far'>&#xf1f9;</i>&nbsp; &nbsp;copyright by Mihir Kumar Das(SILVERTEX)</p>
+	</div>
+</footer>
+
+
+<script type="text/javascript">
+
+$('.count').counterUp({
+	delay:10,
+	time:3000
+})
+
+	
+mybutton = document.getElementById("myBtn");
+// When the user scrolls down 100px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+mybutton.style.display = "block";
+} else {
+mybutton.style.display = "none";
+}
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+</script>
+
+</body>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZGFzbWloaXIiLCJhIjoiY2s4Ymk2cjRmMDRrbTNmbnJzd29zdXYxayJ9.emu1d_5lTTw0_wNz0tBhWw';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    zoom: 2,
+    });
+  
+  
+
+    </script>
+    <script src="main.js"></script>
+
+</html>
+<!--
+
+<?php
+
+include 'dbcon.php';
+
+if(isset($_POST['submit'])){
+
+	$username = $_POST['username'];
+	$email = $_POST['email'];
+	$mobile = $_POST['mobile'];
+	$symp = $_POST['coronasym'];
+	$msg = $_POST['msg'];
+
+	$chk = "";
+
+	foreach($symp as $chk1){
+		$chk .= $chk1."," ;
+	}
+
+	$insertquery = " insert into coronacase(username, email, mobile, symp, message) values('$username', '$email', '$mobile', '$chk', '$msg') ";
+
+	$query = mysqli_query($con, $insertquery);
+
+
+	if($query){
+		?>
+		<script>
+			alert("inserted successful");
+		</script>
+		<?php
+	}else{
+		?>
+		<script>
+			alert("No inserted ");
+		</script>
+		<?php
+	}
+}-
+
+
+?>-->
